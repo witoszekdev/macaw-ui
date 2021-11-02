@@ -11,7 +11,13 @@ import {
 import { Meta } from "@storybook/react";
 import React from "react";
 
-import { Button, DialogHeader, DialogTable, ScrollShadow } from "../src";
+import {
+  Button,
+  DialogHeader,
+  DialogTable,
+  ScrollShadow,
+  DialogScrollableContent,
+} from "../src";
 import {
   isScrolledToBottom,
   isScrolledToTop,
@@ -76,6 +82,27 @@ export const WithOverflowTable: React.FC = () => {
     </Dialog>
   );
 };
+
+export const WithScrollableContent: React.FC = () => (
+  <Dialog open maxWidth={false}>
+    <DialogHeader onClose={() => undefined}>Attention Alert</DialogHeader>
+    <DialogScrollableContent>
+      The following employees will get access to Saleor Dashboard:
+      <ul>
+        {employees.map((employee) => (
+          <li key={employee.email}>
+            {employee.name}, {employee.job}
+          </li>
+        ))}
+      </ul>
+    </DialogScrollableContent>
+    <DialogActions>
+      <Button color="primary" variant="primary">
+        OK
+      </Button>
+    </DialogActions>
+  </Dialog>
+);
 
 export default {
   title: "Dialogs",

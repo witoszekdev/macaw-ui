@@ -27,3 +27,4 @@ export * from "./tools";
 export * from "./Button";
 export * from "./IconButton";
 export * from "./PillLink";
+export * from "./DialogScrollableContent";

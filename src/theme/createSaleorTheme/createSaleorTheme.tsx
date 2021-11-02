@@ -77,15 +77,19 @@ export const createTheme = (colors: SaleorThemeColors): SaleorTheme =>
       },
       MuiDialogActions: {
         root: {
-          padding: "16px 24px",
+          padding: "16px 32px 24px",
+          position: "relative",
         },
       },
       MuiDialogContent: {
         root: {
+          "&:nth-last-child(2)": {
+            paddingBottom: 0,
+          },
           overflowX: undefined,
           overflowY: undefined,
-          padding: `24px 0px`,
-          margin: `0px 24px`,
+          padding: "32px 0px",
+          margin: "0px 32px",
         },
       },
       MuiDialogContentText: {
@@ -93,6 +97,14 @@ export const createTheme = (colors: SaleorThemeColors): SaleorTheme =>
           "&:last-child": {
             marginBottom: 0,
           },
+        },
+      },
+      MuiDialogTitle: {
+        root: {
+          "& + .MuiDialogContent-root": {
+            paddingTop: 0,
+          },
+          padding: "24px 32px 12px",
         },
       },
       MuiDivider: {
