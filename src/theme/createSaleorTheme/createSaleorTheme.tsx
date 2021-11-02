@@ -77,7 +77,6 @@ export const createTheme = (colors: SaleorThemeColors): SaleorTheme =>
       },
       MuiDialogActions: {
         root: {
-          borderTop: `1px solid ${colors.divider}`,
           padding: "16px 24px",
         },
       },
