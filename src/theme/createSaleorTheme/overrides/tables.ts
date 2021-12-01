@@ -38,12 +38,14 @@ export const tableOverrides = (
       "&:first-child": {
         "&:not($paddingCheckbox)": {
           paddingLeft: 32,
-          paddingRight: 32,
           textAlign: "left",
         },
       },
+      "&:last-child": {
+        paddingRight: 32,
+      },
       borderBottomColor: colors.background.default,
-      padding: "24px 32px",
+      padding: "24px 16px",
     },
   },
   MuiTablePagination: {

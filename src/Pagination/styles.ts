@@ -59,6 +59,10 @@ const useStyles = makeStyles(
         color: theme.palette.primary.main,
       },
     },
+    tableCell: {
+      paddingBottom: 0,
+      paddingTop: 0,
+    },
   }),
   { name: "Pagination" }
 );
